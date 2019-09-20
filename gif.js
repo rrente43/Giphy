@@ -3,7 +3,7 @@ $(function(){
     // console.log('page loader');
 
 })
-var searchArray = ['dog','cat','bird'];
+var searchArray = ['Michael Scott','Dwight Schrute','Best Boss','Sorry I annoyed you with my friendship.','Pam Beesly'];
 
 function populateButtons(searchArray,classToAdd,areaToAddTo){
      $(areaToAddTo).empty();
@@ -42,17 +42,17 @@ function populateButtons(searchArray,classToAdd,areaToAddTo){
     })
  })
 
-//  $(document).on('click','searchImage',function(){
-//      var state = $(this).data('data-state');
-//      if(state == 'still'){
-//          $(this).attr('src',$(this).data('animated'));
-//          $(this).attr('data-state','animated');
-//      } else{
-//         $(this).attr('src',$(this).data('still'));
-//         $(this).attr('data-state','still');
+ $(document).on('click','.searchImage',function(){
+     var state = $(this).data('data-state');
+     if(state == 'still'){
+         $(this).attr('src',$(this).data('animated'));
+         $(this).attr('data-state','animated');
+     } else{
+        $(this).attr('src',$(this).data('still'));
+        $(this).attr('data-state','still');
 
-//      }
-//  }
+     }
+ })
 
 
 $('#addSearch').on('click', function(){
